@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melencio G. Villanueva III | HR Administrative Support</title>
+  <meta name="description" content="Professional portfolio of Melencio G. Villanueva III, HR Administrative Support, Recruitment and Documentation Specialist." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --black: #0a0a0a;
+      --black-2: #101318;
+      --navy: #071a33;
+      --blue: #2f80ed;
+      --blue-soft: #63b3ff;
+      --text: #f7f9fc;
+      --muted: #a7b0bf;
+      --line: rgba(99, 179, 255, 0.18);
+      --card: rgba(15, 22, 34, 0.78);
+      --card-2: rgba(10, 25, 48, 0.58);
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 82% 8%, rgba(47, 128, 237, 0.26), transparent 28%),
+        radial-gradient(circle at 8% 34%, rgba(15, 61, 115, 0.23), transparent 32%),
+        var(--black);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 10, 10, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 1.05rem;
+    }
+
+    .logo span { color: var(--blue-soft); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--blue-soft); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #0d3f7f, #2f80ed);
+      border-color: rgba(99, 179, 255, 0.4);
+      box-shadow: 0 15px 45px rgba(47, 128, 237, 0.24);
+    }
+
+    .btn:hover { transform: translateY(-2px); border-color: rgba(99, 179, 255, 0.55); }
+
+    .hero {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 56px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--blue-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: #dce7f7;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 640px;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+
+    .hero-card {
+      position: relative;
+      padding: 18px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(12, 30, 57, 0.9), rgba(13, 16, 24, 0.9));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(circle at 50% 12%, rgba(99, 179, 255, 0.35), transparent 34%);
+      pointer-events: none;
+    }
+
+    .profile-wrap {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 26px;
+      overflow: hidden;
+      background: #0b1220;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-placeholder {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px;
+    }
+
+    .quick-info {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .quick-info div {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .quick-info small { color: var(--muted); display: block; }
+    .quick-info strong { color: var(--text); font-size: 0.92rem; }
+
+    section { padding: 92px 0; border-top: 1px solid rgba(99, 179, 255, 0.1); }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 38px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+
+    .section-head p { max-width: 560px; color: var(--muted); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.22);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(99, 179, 255, 0.48);
+      box-shadow: 0 24px 70px rgba(47, 128, 237, 0.12);
+    }
+
+    .card h3 { font-size: 1.12rem; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .card p, .card li { color: var(--muted); font-size: 0.96rem; }
+    .card ul { padding-left: 18px; }
+
+    .number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(47, 128, 237, 0.14);
+      color: var(--blue-soft);
+      border: 1px solid var(--line);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .about-panel {
+      background: linear-gradient(135deg, rgba(8, 25, 49, 0.85), rgba(14, 17, 25, 0.9));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+    }
+
+    .facts {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fact {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .fact span { color: var(--muted); }
+    .fact strong { color: var(--blue-soft); text-align: right; }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tool {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: 999px;
+      padding: 12px 16px;
+      color: #d9e8fb;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .preview {
+      min-height: 260px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(47,128,237,0.18), rgba(255,255,255,0.03));
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      padding: 22px;
+      overflow: hidden;
+    }
+
+    .preview img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .case-tags span {
+      color: var(--blue-soft);
+      background: rgba(47,128,237,0.12);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .stat {
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 800;
+      letter-spacing: -0.08em;
+      color: var(--blue-soft);
+      line-height: 0.9;
+    }
+
+    footer {
+      padding: 80px 0 30px;
+      background: linear-gradient(180deg, transparent, rgba(5, 18, 35, 0.65));
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      padding: 34px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(8, 25, 49, 0.92), rgba(12, 12, 12, 0.95));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-list { display: grid; gap: 12px; }
+    .contact-list a, .contact-list div {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #dfeafa;
+    }
+
+    .copyright { margin-top: 36px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+
+    .fade-in { animation: fadeUp 0.9s ease both; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero, .grid-2, .project, .why-grid, .contact-card { grid-template-columns: 1fr; }
+      .hero { padding: 52px 0; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 16px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      section { padding: 68px 0; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: min(100% - 28px, var(--max)); }
+      .quick-info { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .card, .about-panel, .contact-card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">Melencio<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#tools">Tools</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn" href="mailto:melenciovillanueva1@gmail.com">Email Me</a>
+    </nav>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div class="fade-in">
+        <div class="eyebrow">HR Virtual Assistant Portfolio</div>
+        <h1>Melencio G. Villanueva III</h1>
+        <div class="subtitle">HR Administrative Support | Recruitment & Documentation Specialist</div>
+        <p>
+          I help HR teams keep recruitment updates, employee records, payroll documentation,
+          and 201 files organized, accurate, and easy to monitor through structured systems and reliable administrative support.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-card fade-in">
+        <div class="profile-wrap">
+          <img src="profile.jpg" alt="Melencio Villanueva Profile Photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <div class="profile-placeholder" style="display:none;">
+            <strong>Profile Photo</strong><br />Upload profile.jpg beside index.html
+          </div>
+        </div>
+        <div class="quick-info">
+          <div><small>Experience</small><strong>5+ Years</strong></div>
+          <div><small>Specialty</small><strong>HR Documentation</strong></div>
+          <div><small>Location</small><strong>Davao City, PH</strong></div>
+          <div><small>Work Style</small><strong>Remote Support</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p>Dedicated HR and administrative professional with corporate experience in documentation, recruitment support, records handling, and employee data management.</p>
+      </div>
+      <div class="grid-2">
+        <div class="about-panel">
+          <p>
+            I specialize in HR administrative support, 201 file management, recruitment documentation,
+            payroll documentation, employee exit tracking, and confidential records handling.
+          </p>
+          <br />
+          <p>
+            My work focuses on keeping HR files complete, employee information organized, and administrative processes easy to monitor for HR teams and business owners.
+          </p>
+        </div>
+        <div class="about-panel facts">
+          <div class="fact"><span>Years of Experience</span><strong>5+ Years</strong></div>
+          <div class="fact"><span>Core Strength</span><strong>Records Management</strong></div>
+          <div class="fact"><span>Focus Area</span><strong>HR Admin Support</strong></div>
+          <div class="fact"><span>Work Approach</span><strong>Organized & Confidential</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>What I Deliver</h2>
+        <p>Practical HR support services built around accuracy, documentation, and organized follow-through.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="number">01</div><h3>Recruitment & ATS Support</h3><p>Assist with applicant tracking, candidate updates, interview schedules, and recruitment documentation.</p></div>
+        <div class="card"><div class="number">02</div><h3>Payroll Documentation Support</h3><p>Maintain attendance, deductions, payroll records, and contribution documentation for easier monitoring.</p></div>
+        <div class="card"><div class="number">03</div><h3>Employee 201 File Management</h3><p>Organize employee records, uploaded documents, HR forms, and personnel files in a structured system.</p></div>
+        <div class="card"><div class="number">04</div><h3>EETS / Exit Tracking</h3><p>Support employee exit tracking, clearance monitoring, and documentation follow-ups.</p></div>
+        <div class="card"><div class="number">05</div><h3>HR Documentation & Compliance</h3><p>Prepare, organize, and maintain HR documents with attention to accuracy and confidentiality.</p></div>
+        <div class="card"><div class="number">06</div><h3>Administrative & Data Entry Support</h3><p>Handle employee data, trackers, reports, forms, and organized administrative records.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="container">
+      <div class="section-head">
+        <h2>Tools & Systems</h2>
+        <p>Systems used to support HR tracking, employee records, recruitment updates, and documentation workflows.</p>
+      </div>
+      <div class="tools">
+        <span class="tool">Microsoft Excel</span>
+        <span class="tool">Google Workspace</span>
+        <span class="tool">Google Sheets</span>
+        <span class="tool">Google Drive</span>
+        <span class="tool">Gmail</span>
+        <span class="tool">ATS</span>
+        <span class="tool">EETS</span>
+        <span class="tool">Payroll Tracker</span>
+        <span class="tool">HR Documentation Tools</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-head">
+        <h2>How I Work</h2>
+        <p>A simple HR support process designed to keep records clean, tasks visible, and documentation updated.</p>
+      </div>
+      <div class="grid-4 grid-3">
+        <div class="card"><div class="number">01</div><h3>Organize</h3><p>Structure employee records, HR files, forms, and trackers for easy access.</p></div>
+        <div class="card"><div class="number">02</div><h3>Verify</h3><p>Review details for completeness, accuracy, and proper documentation.</p></div>
+        <div class="card"><div class="number">03</div><h3>Coordinate</h3><p>Support communication, updates, follow-ups, and HR administrative flow.</p></div>
+        <div class="card"><div class="number">04</div><h3>Maintain</h3><p>Keep HR records updated, confidential, and easy to monitor over time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <h2>Project Showcase</h2>
+        <p>Sample HR documentation systems built to show practical organization, employee data tracking, and records management.</p>
+      </div>
+
+      <div class="project">
+        <div class="preview">
+          <img src="employee-201-files.jpg" alt="Employee 201 File System Screenshot" onerror="this.style.display='none'; this.parentElement.innerHTML='Employee 201 File System<br><small>Upload employee-201-files.jpg</small>';" />
+        </div>
+        <div class="card">
+          <div class="eyebrow">Case Study 01</div>
+          <h3>Employee 201 File System</h3>
+          <div class="case-tags"><span>Google Drive</span><span>HR Records</span><span>Documentation</span></div>
+          <p><strong>Problem:</strong> Employee documents can become scattered and difficult to monitor without a central structure.</p>
+          <p><strong>Solution:</strong> Created a centralized Google Drive folder for employee 201 files, forms, and uploaded documents.</p>
+          <p><strong>Result:</strong> HR records became easier to locate, update, and maintain securely in one organized location.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="preview">
+          <img src="employee-information-form.jpg" alt="Employee Information Google Form Screenshot" onerror="this.style.display='none'; this.parentElement.innerHTML='Employee Information Form<br><small>Upload employee-information-form.jpg</small>';" />
+        </div>
+        <div class="card">
+          <div class="eyebrow">Case Study 02</div>
+          <h3>Employee Information Collection Form</h3>
+          <div class="case-tags"><span>Google Forms</span><span>Data Collection</span><span>Standardization</span></div>
+          <p><strong>Problem:</strong> Employee information collection can become inconsistent when gathered manually.</p>
+          <p><strong>Solution:</strong> Built a Google Form to standardize employee information collection for HR records.</p>
+          <p><strong>Result:</strong> Employee data became easier to collect, validate, and store for documentation purposes.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="preview">
+          <img src="employee-database.jpg" alt="Employee Database Tracking System Screenshot" onerror="this.style.display='none'; this.parentElement.innerHTML='Employee Database Tracking System<br><small>Upload employee-database.jpg</small>';" />
+        </div>
+        <div class="card">
+          <div class="eyebrow">Case Study 03</div>
+          <h3>Employee Database Tracking System</h3>
+          <div class="case-tags"><span>Google Sheets</span><span>Database</span><span>Tracking</span></div>
+          <p><strong>Problem:</strong> HR teams need a clear employee database for tracking and updating personnel information.</p>
+          <p><strong>Solution:</strong> Created a Google Sheet database that stores employee information responses automatically.</p>
+          <p><strong>Result:</strong> HR data became easier to monitor, update, and use for documentation workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container why-grid">
+      <div class="card">
+        <div class="eyebrow">Why Work With Me</div>
+        <h2>Reliable HR support with strong documentation discipline.</h2>
+        <br />
+        <p>I bring organized records management, attention to detail, corporate HR support experience, professional communication, and careful handling of confidential employee records.</p>
+      </div>
+      <div class="card">
+        <div class="stat">5+</div>
+        <h3>Years of Corporate Experience</h3>
+        <p>Built around documentation, records handling, recruitment support, employee data, and administrative coordination.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2>Let’s organize your HR records.</h2>
+          <p style="color: var(--muted); margin-top: 14px;">Tell me what HR documentation, recruitment tracking, or employee record system you need help maintaining.</p>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:melenciovillanueva1@gmail.com">melenciovillanueva1@gmail.com</a>
+          <a href="tel:+639121726554">09121726554</a>
+          <div>Purok 4 Tibuloy, Toril, Davao City, 8000</div>
+          <div>Working Hours: Available for remote HR administrative support</div>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Melencio G. Villanueva III. HR Administrative Support Portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
